@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Auth</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Google Fonts -->
+
+	<!-- icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<!-- Favicons -->
+	<link href="images/favicon.png" rel="icon">
+	<link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+	<!-- Bootstrap CSS File -->
+	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Main Stylesheet File -->
+	<link href="stylesheets/auth.css" rel="stylesheet">
+
+	<!--===============================================================================================-->
+</head>
+<body>
+	<header id="header">
+		<div class="container-fluid">  
+			<div id="logo" class="pull-left">
+				<h1><a href="/" class="scrollto">MyPage</a></h1>
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+			</div>
+		</div>
+	</header>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-30 p-b-15">
+				<form class="login100-form validate-form" action="/signup" method="post">
+					<span class="login100-form-title p-b-40">
+						Welcome
+					</span>
+					<span class="login100-form-avatar">
+						<img src="images/avatar-01.jpg" alt="AVATAR">
+					</span>
+					<div class="wrap-input100 validate-input m-b-22" data-validate = "Enter E-mail">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="E-mail"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-30" data-validate="Enter password">
+						<input class="input100" type="password" name="password">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+					<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Join US
+						</button>
+					</div>
+
+					<ul class="login-more p-t-40">
+						<li>
+							<span class="txt1">
+								Have an account?
+							</span>
+
+							<a href="/login" class="txt2">
+								Log In
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+	<!-- Template Main Javascript File -->
+	<script src="javascripts/auth.js"></script>
+
+</body>
+</html>
